@@ -1,0 +1,28 @@
+{
+  "name": "ethda-backend",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "repository": "git@github.com:crustio/ethda-backend.git",
+  "author": "KayleCoder <kalecoder@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "gts clean && tsc && npm run cpTxt",
+    "cpTxt": "cp src/trusted.txt dist/"
+  },
+  "dependencies": {
+    "@ethda/blobs": "^0.2.0",
+    "body-parser": "^1.20.2",
+    "c-kzg": "^2.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "gts": "^5.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

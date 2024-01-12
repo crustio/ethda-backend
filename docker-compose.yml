@@ -1,0 +1,12 @@
+---
+version: "3.7"
+
+services:
+  indexer:
+    image: gavfu/ethda-backend:latest
+    network_mode: host
+    restart: always
+    env_file:
+      - ".env"
+    ports:
+      - 30002:3000
