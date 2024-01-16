@@ -15,8 +15,9 @@ app.use(cors({
 app.use(bodyParser.json());
 app.post('/convert/blob', (req: any, res: any) => {
     const content = req.body.content;
+
     if (content) {
-        const blobs = EncodeBlobs(Buffer.from(content, 'utf-8'));
+        const blobs = EncodeBlobs(new Uint8Array(content));
         const commitments = [];
         const proofs = [];
         const versionedHashes = [];
