@@ -12,10 +12,9 @@ app.use(cors({
     origin:true,
     credentials: true
 }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '2mb'}));
 app.post('/convert/blob', (req: any, res: any) => {
     const content = req.body.content;
-
     if (content) {
         const blobs = EncodeBlobs(new Uint8Array(content));
         const commitments = [];
