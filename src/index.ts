@@ -62,7 +62,8 @@ app.get('/blob/:hash/txData', async (req: any, res: any) => {
     if (hash) {
         const result = await queryForArray(`SELECT
 \tbt.tx_hash,
-\ttr.input_data
+\ttr.input_data,
+\tbt.index
 FROM
 \tblobs_on_transactions AS bt
 \tJOIN "transaction" AS tr ON bt.tx_hash = tr.hash 
