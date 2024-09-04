@@ -54,5 +54,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            gavfu/ethda-backend:latest
-            gavfu/ethda-backend:${{ env.date }}
+            crustio/ethda-backend:latest
+            crustio/ethda-backend:${{ env.date }}
